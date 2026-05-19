@@ -15,7 +15,6 @@ const About = () => {
 
       <section className="">
         <p className="section-title">Raid Schedule</p>
-        <h1 className="section-header">We go again!</h1>
         <div className="section-description grid gap-6 md:grid-cols-2">
           {raidTimes.map((item) => (
             <div className="card" key={item.label}>

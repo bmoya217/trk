@@ -40,7 +40,8 @@ const playerResources = [
   },
   {
     name: "WoW Utils",
-    description: "Raid planning, roster assignemnts, simulation submitions",
+    description:
+      "Raid planning, roster assignments, and simulation submissions.",
     href: "https://wowutils.com/viserio-cooldowns/groups/66e3db435a95350dd76a2b42",
   },
 ];

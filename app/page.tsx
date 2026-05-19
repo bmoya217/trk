@@ -1,14 +1,14 @@
 const links = [
   {
-    label: "Schedule",
+    label: "About",
     href: "/about",
   },
   {
-    label: "Apply",
+    label: "Connect",
     href: "/connect",
   },
   {
-    label: "Tools",
+    label: "Resources",
     href: "/resources",
   },
 ];
@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <main className="page-container">
       <section className="page-intro">
-        <p className="section-title">World of Warcraft Guild</p>
+        <p className="section-title">Alliance guild on Proudmoore.</p>
         <h1 className="section-header">TRK</h1>
         <p className="section-subheader">
           A laid-back guild for players who still like clearing content.
@@ -102,8 +102,8 @@ export default function Home() {
         <p className="section-title">Recruitment</p>
         <h2 className="card-header">Looking for people who fit the vibe.</h2>
         <p className="card-description">
-          TRK is usually interested in reliable players who are chill, willing
-          to learn, and not weird about mistakes. If you want raid nights, keys,
+          TRK is usually interested in reliable players who are prepared,
+          communicative, and willing to learn. If you want raid nights, keys,
           and a group that actually talks to each other, check recruitment.
         </p>
 
