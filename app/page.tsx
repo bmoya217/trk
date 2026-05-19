@@ -63,6 +63,7 @@ export default function Home() {
               <a
                 className="tag hover:text-foreground transition-colors"
                 href={item.href}
+                key={item.label}
               >
                 {item.label}
               </a>
@@ -89,7 +90,7 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {guildInfo.map((item) => {
             return (
-              <div className="card">
+              <div className="card" key={item.label}>
                 <h3 className="card-header">{item.label}</h3>
                 <p className="card-description">{item.description}</p>
               </div>

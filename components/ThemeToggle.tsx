@@ -5,8 +5,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 const themes = [
-  { value: "light", label: "Light" },
-  { value: "dark", label: "Dark" },
+  { value: "light", label: "Alliance" },
+  { value: "dark", label: "Horde" },
   { value: "tremens", label: "Tremens" },
 ];
 
