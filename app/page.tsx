@@ -1,65 +1,120 @@
-import Image from "next/image";
+const links = [
+  {
+    label: "Schedule",
+    href: "/about",
+  },
+  {
+    label: "Apply",
+    href: "/connect",
+  },
+  {
+    label: "Tools",
+    href: "/resources",
+  },
+];
+
+const raidInfo = [
+  { label: "Guild", value: "TRK" },
+  { label: "Focus", value: "Raiding / M+" },
+  { label: "Game", value: "World of Warcraft" },
+];
+
+const guildInfo = [
+  {
+    label: "Progression without the ego",
+    description:
+      "We like improving, killing bosses, pushing keys, and showing up prepared — but we are not here to make raid night miserable.",
+  },
+  {
+    label: "Mythic plus friendly",
+    description:
+      "Whether you are gearing alts, filling vault slots, or pushing higher keys, the goal is to make it easier to find people you actually want to play with.",
+  },
+  {
+    label: "Alt-friendly, real-life friendly",
+    description:
+      "People have jobs, families, school, and other games. TRK is for players who want consistency without pretending WoW is their full identity.",
+  },
+  {
+    label: "Discord-first community",
+    description:
+      "Most planning, memes, raid reminders, and key groups happen in Discord. The website is here to keep the important stuff easy to find.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="page-container">
+      <section className="page-intro">
+        <p className="section-title">World of Warcraft Guild</p>
+        <h1 className="section-header">TRK</h1>
+        <p className="section-subheader">
+          A laid-back guild for players who still like clearing content.
+        </p>
+        <p className="section-description">
+          TRK is a World of Warcraft guild built around steady progression,
+          mythic plus, raid nights, and hanging out without turning the game
+          into a second job.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          {links.map((item) => {
+            return (
+              <a
+                className="tag hover:text-foreground transition-colors"
+                href={item.href}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="grid gap-6 md:grid-cols-3">
+        {raidInfo.map((item) => (
+          <div className="card" key={item.label}>
+            <p className="card-link-label">{item.label}</p>
+            <p className="card-stat">{item.value}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="cards-container">
+        <div>
+          <p className="section-title">About</p>
+          <h2 className="section-header">What kind of guild is TRK?</h2>
         </div>
-      </main>
-    </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {guildInfo.map((item) => {
+            return (
+              <div className="card">
+                <h3 className="card-header">{item.label}</h3>
+                <p className="card-description">{item.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="card">
+        <p className="section-title">Recruitment</p>
+        <h2 className="card-header">Looking for people who fit the vibe.</h2>
+        <p className="card-description">
+          TRK is usually interested in reliable players who are chill, willing
+          to learn, and not weird about mistakes. If you want raid nights, keys,
+          and a group that actually talks to each other, check recruitment.
+        </p>
+
+        <a
+          className="card-link inline-block"
+          href="https://forms.gle/H7enJG38rfGfGSXu6"
+          target="_blank"
+        >
+          Apply →
+        </a>
+      </section>
+    </main>
   );
 }
