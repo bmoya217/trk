@@ -80,7 +80,7 @@
   }
 
   .card {
-    @apply rounded-3xl border-2 border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted space-y-4 md:space-y-8 p-6;
+    @apply rounded-3xl border-2 border-border bg-card shadow-sm transition-colors hover:border-muted hover:shadow-md text-sm text-muted space-y-2 md:space-y-4 p-6;
   }
 
   .card-header {

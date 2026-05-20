@@ -1,18 +1,10 @@
 export const raidTimes = [
   {
-    label: "Monday",
+    label: "Monday / Tuesday (Until CE)",
     value: "5:30 PM - 8:30 PM PST",
   },
   {
-    label: "Tuesday",
-    value: "5:30 PM - 8:30 PM PST",
-  },
-  {
-    label: "Wednesday",
-    value: "5:30 PM - 8:30 PM PST",
-  },
-  {
-    label: "Thursday",
+    label: "Wednesday / Thursday",
     value: "5:30 PM - 8:30 PM PST",
   },
 ];

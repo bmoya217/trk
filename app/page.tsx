@@ -1,3 +1,5 @@
+import { CardLink } from "@/components/CardLink";
+
 const links = [
   {
     label: "About",
@@ -99,22 +101,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="card">
-        <p className="section-title">Recruitment</p>
-        <h2 className="card-header">Looking for people who fit the vibe.</h2>
-        <p className="card-description">
-          TRK is usually interested in reliable players who are prepared,
-          communicative, and willing to learn. If you want raid nights, keys,
-          and a group that actually talks to each other, check recruitment.
-        </p>
-
-        <a
-          className="card-link inline-block"
+      <section>
+        <CardLink
+          title="Recruitment"
+          header="Looking for people who fit the vibe."
+          description="TRK is usually interested in reliable players who are prepared, communicative, and willing to learn. If you want raid nights, keys, and a group that actually talks to each other, check recruitment."
           href="https://forms.gle/H7enJG38rfGfGSXu6"
-          target="_blank"
-        >
-          Apply →
-        </a>
+        />
       </section>
     </main>
   );
