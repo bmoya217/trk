@@ -4,7 +4,7 @@ export const externalLinks = [
     header: "Join the guild Discord",
     description:
       "Discord is where most raid updates, key groups, announcements, and guild conversations happen.",
-    href: "",
+    href: "https://discord.gg/7qHcm8Gj6Y",
   },
   {
     title: "Recruitment",
